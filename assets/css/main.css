@@ -1,0 +1,112 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 30px;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 100px; 
+}
+/* 
+ol {
+    
+} */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown label {
+    /* display: inline-block; */
+    /* padding: 5px 15px; */
+    /* background-color: gray; */
+    cursor: pointer;
+}
+
+.dropdown ol {
+    padding: 0;
+    list-style-position: inside;
+    /* display: none; */
+    max-height: 0px;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.8s ease-out; 
+    position: absolute;
+    background-color: gray;
+}
+
+#dropdown-btn {
+    display: none;
+}
+
+#dropdown-btn:checked + ol {
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+.solid::after {
+    font: var(--fa-font-solid);
+    content: "\f0d7";
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.modal-container label {
+    color: black;
+    cursor: pointer;
+}
+
+.modal-container input {
+    display: none;
+}
+
+.modal-container input:checked + .modal {
+    /* display: flex; */
+    transform: scale(1);
+}  
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 161, 110, 0.3);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    /* display: none; */
+    transform: scale(0);
+    transition: transform .3s ease-out;  
+    /* transform-origin: left 20px; */
+}
+
+.modal .wrapper {
+    background-color: whitesmoke;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal .exit {
+    position: relative;
+    top: -45px;
+    left: 45px;
+}
